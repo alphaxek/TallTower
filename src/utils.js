@@ -25,11 +25,21 @@ export const getAngleBase = (engine) => {
   }
   switch (true) {
     case successCount < 10:
-      return 30
+      return 10
     case successCount < 20:
+      return 20
+    case successCount < 30:
+      return 30
+    case successCount < 40:
+      return 40
+    case successCount < 50:
+      return 50
+    case successCount < 60:
       return 60
+    case successCount < 70:
+      return 70
     default:
-      return 80
+      return 50
   }
 }
 
@@ -43,16 +53,37 @@ export const getSwingBlockVelocity = (engine, time) => {
   let hard
   switch (true) {
     case successCount < 1:
+      hard = 0.1
+      break
+    case successCount < 10:
+      hard = 0.2
+      break
+    case successCount < 20:
       hard = 0.3
       break
-    case successCount < 15:
-      hard = 0.6
-      break
     case successCount < 30:
-      hard = 0.7
+      hard = 0.4
       break
     case successCount < 40:
-      hard = 0.8
+      hard = 0.45
+      break
+    case successCount < 50:
+      hard = 0.5
+      break
+    case successCount < 60:
+      hard = 0.55
+      break
+    case successCount < 70:
+      hard = 0.6
+      break
+    case successCount < 80:
+      hard = 0.65
+      break
+    case successCount < 90:
+      hard = 0.7
+      break
+    case successCount < 100:
+      hard = 0.75
       break
     default:
       hard = 0.84
