@@ -92,7 +92,7 @@ export const getSwingBlockVelocity = (engine, time) => {
   if (engine.getVariable(constant.hardMode)) {
     hard = 1.1
   }
-  return Math.sin(time / (200 / hard))
+  return Math.sin(time / (100 / hard))
 }
 
 export const getLandBlockVelocity = (engine, time) => {
